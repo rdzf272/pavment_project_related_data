@@ -40,6 +40,4 @@ class LGhostBottleneck(nn.Module):
                                     padding=0,
                                     groups=1)
     def forward(self, x):
-        # return self.conv(x) + self.Pointwise_Convolution1(self.shortcut(x))+self.Pointwise_Convolution2(self.shortcut2(x))
-        # return self.Pointwise_Convolution1(self.conv(x)) + self.Pointwise_Convolution2(self.shortcut(x))
         return self.conv(x)+self.shortcut(x)
